@@ -3,12 +3,12 @@ const App = defineComponent({
   name: 'app',
   data() {
     return {
-      a: 0,
+      count: 0,
     };
   },
   methods: {
     increment() {
-      this.a++;
+      this.count++;
     },
   },
 });

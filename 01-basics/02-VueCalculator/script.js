@@ -5,25 +5,25 @@ const App = defineComponent({
     return {
       a: 0,
       b: 0,
-      c: 0,
+      result: 0,
       operator: 'sum',
     };
   },
 
-  methods: {
+  computed: {
     calculate() {
       switch (this.operator) {
         case 'sum':
-          this.c = this.a + this.b;
+          this.result = this.a + this.b;
           break;
         case 'subtract':
-          this.c = this.a - this.b;
+          this.result = this.a - this.b;
           break;
         case 'multiply':
-          this.c = this.a * this.b;
+          this.result = this.a * this.b;
           break;
         case 'divide':
-          this.c = this.a / this.b;
+          this.result = this.a / this.b;
           break;
       }
     },

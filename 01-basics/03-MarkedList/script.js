@@ -33,13 +33,17 @@ const App = {
       ],
     };
   },
+  //Попробуйте использовать вычисляемое свойство computed,
+  //которое будет на основе исходного массива с Email-ами и значением фильтра вычислять новый массив,
+  //содержащий в каждом элементе как Email так и флаг его выделения
   computed: {
     filteredEmails() {
-      const searchTextLower = this.searchText.toLowerCase();
-      return this.emails.map((email) => ({
+      const searchLow = this.searchText.toLowerCase();
+      const flaggedEmails = this.emails.map((email) => ({
         email,
-        marked: searchTextLower && email.toLowerCase().includes(searchTextLower),
+        marked: searchLow && email.toLowerCase().includes(searchLow),
       }));
+      return flaggedEmails;
     },
   },
 };

@@ -2,7 +2,6 @@
   <div class="wrapper bg-grey">
     <main class="main container">
       <h1 style="margin: 1rem 0">Задачник курса по Vue 3</h1>
-      <div>Test div added succesefull!</div>
       <nav style="font-size: 20px">
         <ul style="list-style: none">
           <li v-for="(tasks, module) in taskTree" :key="module">

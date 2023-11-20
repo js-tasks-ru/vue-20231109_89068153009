@@ -31,27 +31,25 @@
     <div id="app" class="container">
       <div class="row">
         <div class="col">
-          <input type="number" v-model="a" @change="calculate" />
+          <input type="number" v-model="a" @watch="calculate" />
         </div>
 
         <div class="col" style="display: flex; flex-direction: column; font-family: emoji">
-          <label><input type="radio" name="operator" value="sum" v-model="operator" @change="calculate" /> ➕</label>
+          <label><input type="radio" name="operator" value="sum" v-model="operator" @watch="calculate" /> ➕</label>
           <label
-            ><input type="radio" name="operator" value="subtract" v-model="operator" @change="calculate" /> ➖</label
+            ><input type="radio" name="operator" value="subtract" v-model="operator" @watch="calculate" /> ➖</label
           >
-          <label
-            ><input type="radio" name="operator" value="multiply" v-model="operator" @change="calculate" /> ✖</label
-          >
-          <label><input type="radio" name="operator" value="divide" v-model="operator" @change="calculate" /> ➗</label>
+          <label><input type="radio" name="operator" value="multiply" v-model="operator" @watch="calculate" /> ✖</label>
+          <label><input type="radio" name="operator" value="divide" v-model="operator" @watch="calculate" /> ➗</label>
         </div>
 
         <div class="col">
-          <input type="number" v-model="b" @change="calculate" />
+          <input type="number" v-model="b" @watch="calculate" />
         </div>
 
         <div class="col">=</div>
 
-        <output class="col">{{c}}</output>
+        <output class="col">{{ result }}</output>
       </div>
     </div>
 
